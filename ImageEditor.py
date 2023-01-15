@@ -27,7 +27,7 @@ class ImageEditor(QMainWindow):
 
         imageWindow = ImageWindow()
 
-        layersPanel = LayersPanel()
+        #layersPanel = LayersPanel()
 
         #connections
         menuBar.fileManager.loadImage.connect(imageWindow.updateImage)
@@ -37,7 +37,7 @@ class ImageEditor(QMainWindow):
         centralWidget = QtWidgets.QWidget()
         layout = QHBoxLayout()
         layout.addWidget(imageWindow, 4)
-        layout.addLayout(layersPanel.layerMenu, 1)
+        #layout.addLayout(layersPanel.layerMenu, 1)
         centralWidget.setLayout(layout)
 
         self.setCentralWidget(centralWidget)
