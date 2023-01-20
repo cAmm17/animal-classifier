@@ -25,9 +25,9 @@
         </size>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
-       <widget class="QWidget" name="tab_3">
+       <widget class="QWidget" name="data_tab">
         <attribute name="title">
          <string>Data</string>
         </attribute>
@@ -35,7 +35,7 @@
          <item>
           <layout class="QVBoxLayout" name="verticalLayout_4">
            <item>
-            <widget class="QLabel" name="label_3">
+            <widget class="QLabel" name="training_graphs">
              <property name="text">
               <string>Training Graphs</string>
              </property>
@@ -52,14 +52,14 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_2">
+            <widget class="QLabel" name="console_output_label">
              <property name="text">
               <string>Console Output:</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QTextEdit" name="textEdit_2">
+            <widget class="QTextEdit" name="console_output_textbox">
              <property name="readOnly">
               <bool>true</bool>
              </property>
@@ -87,7 +87,7 @@
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="tab_4">
+       <widget class="QWidget" name="image_viewer_tab">
         <attribute name="title">
          <string>Image Viewer</string>
         </attribute>
@@ -136,7 +136,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="select_new_dataset_button">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -215,7 +215,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="train_button">
            <property name="minimumSize">
             <size>
              <width>0</width>

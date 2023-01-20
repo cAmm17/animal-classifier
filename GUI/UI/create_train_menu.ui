@@ -19,18 +19,21 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,1">
          <item>
-          <widget class="QLabel" name="label_2">
+          <widget class="QLabel" name="select_model_text">
            <property name="text">
             <string>None Selected</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_3">
+          <widget class="QPushButton" name="select_model_button">
            <property name="text">
-            <string>Select Model</string>
+            <string>(Optional) Select Model</string>
            </property>
           </widget>
          </item>
@@ -39,14 +42,14 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="select_dataset_text">
            <property name="text">
             <string>None Selected</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="select_dataset_button">
            <property name="text">
             <string>(Optional) Select Dataset</string>
            </property>
@@ -55,7 +58,7 @@
         </layout>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="start_button">
          <property name="text">
           <string>Start</string>
          </property>

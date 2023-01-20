@@ -48,21 +48,21 @@ class Ui_Form(object):
 
         self.verticalLayout_4.addItem(self.verticalSpacer_2)
 
-        self.pushButton = QPushButton(Form)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(0, 40))
+        self.remove_image_button = QPushButton(Form)
+        self.remove_image_button.setObjectName(u"remove_image_button")
+        self.remove_image_button.setMinimumSize(QSize(0, 40))
 
-        self.verticalLayout_4.addWidget(self.pushButton)
+        self.verticalLayout_4.addWidget(self.remove_image_button)
 
         self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_4.addItem(self.verticalSpacer_3)
 
-        self.pushButton_2 = QPushButton(Form)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setMinimumSize(QSize(40, 40))
+        self.change_image_classification = QPushButton(Form)
+        self.change_image_classification.setObjectName(u"change_image_classification")
+        self.change_image_classification.setMinimumSize(QSize(40, 40))
 
-        self.verticalLayout_4.addWidget(self.pushButton_2)
+        self.verticalLayout_4.addWidget(self.change_image_classification)
 
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -103,8 +103,8 @@ class Ui_Form(object):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.Image.setText("")
         self.label_2.setText(QCoreApplication.translate("Form", u"Options:", None))
-        self.pushButton.setText(QCoreApplication.translate("Form", u"Remove Image from Dataset", None))
-        self.pushButton_2.setText(QCoreApplication.translate("Form", u"Change Image Classification (For Training Only)", None))
+        self.remove_image_button.setText(QCoreApplication.translate("Form", u"Remove Image from Dataset", None))
+        self.change_image_classification.setText(QCoreApplication.translate("Form", u"Change Image Classification (For Training Only)", None))
         self.label.setText(QCoreApplication.translate("Form", u"Image Confidence over time:", None))
     # retranslateUi
 

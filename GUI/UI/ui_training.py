@@ -31,42 +31,42 @@ class Ui_Form(object):
         self.tabWidget = QTabWidget(Form)
         self.tabWidget.setObjectName(u"tabWidget")
         self.tabWidget.setMinimumSize(QSize(600, 400))
-        self.tab_3 = QWidget()
-        self.tab_3.setObjectName(u"tab_3")
-        self.verticalLayout_5 = QVBoxLayout(self.tab_3)
+        self.data_tab = QWidget()
+        self.data_tab.setObjectName(u"data_tab")
+        self.verticalLayout_5 = QVBoxLayout(self.data_tab)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalLayout_4 = QVBoxLayout()
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.label_3 = QLabel(self.tab_3)
-        self.label_3.setObjectName(u"label_3")
+        self.training_graphs = QLabel(self.data_tab)
+        self.training_graphs.setObjectName(u"training_graphs")
 
-        self.verticalLayout_4.addWidget(self.label_3)
+        self.verticalLayout_4.addWidget(self.training_graphs)
 
-        self.Mathlibgraphs = QWidget(self.tab_3)
+        self.Mathlibgraphs = QWidget(self.data_tab)
         self.Mathlibgraphs.setObjectName(u"Mathlibgraphs")
         self.Mathlibgraphs.setMinimumSize(QSize(500, 300))
 
         self.verticalLayout_4.addWidget(self.Mathlibgraphs)
 
-        self.label_2 = QLabel(self.tab_3)
-        self.label_2.setObjectName(u"label_2")
+        self.console_output_label = QLabel(self.data_tab)
+        self.console_output_label.setObjectName(u"console_output_label")
 
-        self.verticalLayout_4.addWidget(self.label_2)
+        self.verticalLayout_4.addWidget(self.console_output_label)
 
-        self.textEdit_2 = QTextEdit(self.tab_3)
-        self.textEdit_2.setObjectName(u"textEdit_2")
-        self.textEdit_2.setReadOnly(True)
+        self.console_output_textbox = QTextEdit(self.data_tab)
+        self.console_output_textbox.setObjectName(u"console_output_textbox")
+        self.console_output_textbox.setReadOnly(True)
 
-        self.verticalLayout_4.addWidget(self.textEdit_2)
+        self.verticalLayout_4.addWidget(self.console_output_textbox)
 
-        self.label_4 = QLabel(self.tab_3)
+        self.label_4 = QLabel(self.data_tab)
         self.label_4.setObjectName(u"label_4")
 
         self.verticalLayout_4.addWidget(self.label_4)
 
         self.horizontalLayout_5 = QHBoxLayout()
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.pushButton_3 = QPushButton(self.tab_3)
+        self.pushButton_3 = QPushButton(self.data_tab)
         self.pushButton_3.setObjectName(u"pushButton_3")
 
         self.horizontalLayout_5.addWidget(self.pushButton_3)
@@ -77,10 +77,10 @@ class Ui_Form(object):
 
         self.verticalLayout_5.addLayout(self.verticalLayout_4)
 
-        self.tabWidget.addTab(self.tab_3, "")
-        self.tab_4 = QWidget()
-        self.tab_4.setObjectName(u"tab_4")
-        self.tabWidget.addTab(self.tab_4, "")
+        self.tabWidget.addTab(self.data_tab, "")
+        self.image_viewer_tab = QWidget()
+        self.image_viewer_tab.setObjectName(u"image_viewer_tab")
+        self.tabWidget.addTab(self.image_viewer_tab, "")
 
         self.horizontalLayout.addWidget(self.tabWidget)
 
@@ -109,11 +109,11 @@ class Ui_Form(object):
 
         self.verticalLayout_3.addItem(self.verticalSpacer)
 
-        self.pushButton = QPushButton(Form)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(0, 30))
+        self.select_new_dataset_button = QPushButton(Form)
+        self.select_new_dataset_button.setObjectName(u"select_new_dataset_button")
+        self.select_new_dataset_button.setMinimumSize(QSize(0, 30))
 
-        self.verticalLayout_3.addWidget(self.pushButton)
+        self.verticalLayout_3.addWidget(self.select_new_dataset_button)
 
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -144,11 +144,11 @@ class Ui_Form(object):
 
         self.verticalLayout_3.addLayout(self.horizontalLayout_4)
 
-        self.pushButton_2 = QPushButton(Form)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setMinimumSize(QSize(0, 30))
+        self.train_button = QPushButton(Form)
+        self.train_button.setObjectName(u"train_button")
+        self.train_button.setMinimumSize(QSize(0, 30))
 
-        self.verticalLayout_3.addWidget(self.pushButton_2)
+        self.verticalLayout_3.addWidget(self.train_button)
 
         self.progressBar = QProgressBar(Form)
         self.progressBar.setObjectName(u"progressBar")
@@ -174,7 +174,7 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
 
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Form)
@@ -182,14 +182,14 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.label_3.setText(QCoreApplication.translate("Form", u"Training Graphs", None))
-        self.label_2.setText(QCoreApplication.translate("Form", u"Console Output:", None))
+        self.training_graphs.setText(QCoreApplication.translate("Form", u"Training Graphs", None))
+        self.console_output_label.setText(QCoreApplication.translate("Form", u"Console Output:", None))
         self.label_4.setText(QCoreApplication.translate("Form", u"Options:", None))
         self.pushButton_3.setText(QCoreApplication.translate("Form", u"placeholder", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("Form", u"Data", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), QCoreApplication.translate("Form", u"Image Viewer", None))
-        self.pushButton.setText(QCoreApplication.translate("Form", u"Run on new dataset...", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.data_tab), QCoreApplication.translate("Form", u"Data", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.image_viewer_tab), QCoreApplication.translate("Form", u"Image Viewer", None))
+        self.select_new_dataset_button.setText(QCoreApplication.translate("Form", u"Run on new dataset...", None))
         self.label.setText(QCoreApplication.translate("Form", u"Number of Epochs:", None))
-        self.pushButton_2.setText(QCoreApplication.translate("Form", u"Train", None))
+        self.train_button.setText(QCoreApplication.translate("Form", u"Train", None))
     # retranslateUi
 

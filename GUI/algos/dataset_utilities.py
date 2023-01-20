@@ -1,5 +1,5 @@
 
-from tensorflow import keras
+#from tensorflow import keras
 import csv
 import requests
 
@@ -26,9 +26,17 @@ def download_images_from_url(dataset_path, download_location):
 
 
 def download_image(image_url, download_location, filename):
-    img_data = requests.get(image_url).content
-    with open("/".join(download_location, filename), 'wb') as f:
-        f.write(img_data)
+    try:
+        file_extension = "." + image_url.split('.')[-1]
+        img_data = requests.get(image_url).content
+        with open(download_location + "/" + filename + file_extension, 'wb') as f:
+            f.write(img_data)
+    except:
+        print("Failed to download url:")
+        print(image_url)
+        print(filename)
 
 
 
+if __name__=="__main__":
+    download_images_from_url("../../data/csvs/canadian_goose_data.csv", "../../data/images/canadian goose/")

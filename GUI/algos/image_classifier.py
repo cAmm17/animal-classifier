@@ -24,7 +24,7 @@ class ImageClassifier:
         img_height = 180
         img_width = 180
         #should change this to not be based on directories once the model is working
-        self.train_ds = tf.keras.image_dataset_from_directory(
+        self.train_ds = keras.utils.image_dataset_from_directory(
         directory, 
         validation_split = val_split,
         subset="training",
@@ -32,7 +32,7 @@ class ImageClassifier:
         image_size=(img_height, img_width),
         batch_size=batch_size)
 
-        self.val_ds = tf.keras.image_dataset_from_directory(
+        self.val_ds = keras.utils.image_dataset_from_directory(
             directory, 
             validation_split = val_split,
             subset="validation",
@@ -81,3 +81,10 @@ class ImageClassifier:
                 validation_data=self.val_ds,
                 epochs=epochs)
                 
+
+
+if __name__ == "__main__":
+    m = ImageClassifier()
+    m.setup_dataset("../../data/images/", .80)
+    m.create_model(2)
+    m.train_model()
