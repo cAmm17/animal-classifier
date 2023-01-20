@@ -9,7 +9,7 @@ ImageLoader - Recieves the loaded in image from this class as well as sends the 
 """
 from PySide6 import QtCore, QtWidgets, QtGui
 from PySide6.QtCore import Signal, Slot
-from ..algos.ImageManager import ImageManager
+from ..algos.image_manager import ImageManager
 
 class ImageWindow(QtWidgets.QWidget):
     #class members
@@ -28,7 +28,7 @@ class ImageWindow(QtWidgets.QWidget):
         self.imageLabel.setPixmap(pixmap)
 
     @Slot()
-    def updateImage(self):
+    def update_image(self):
         newImg = ImageManager.get_cur_image()
         w, h, chan = newImg.shape
         print(chan)

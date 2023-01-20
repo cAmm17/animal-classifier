@@ -1,7 +1,7 @@
 import sys
-from GUI.UI.ui_StartWindow import Ui_Form as sw_ui
+from GUI.UI.ui_start_window import Ui_Form as sw_ui
 from GUI.UI.ui_create_train_menu import Ui_Form as tm_ui
-from GUI.Widgets.TrainingMainWindow import TrainingMainWindow
+from GUI.Widgets.training_main_window import TrainingMainWindow
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
