@@ -42,11 +42,11 @@ class Ui_Form(object):
 
         self.verticalLayout_4.addWidget(self.training_graphs)
 
-        self.Mathlibgraphs = QWidget(self.data_tab)
-        self.Mathlibgraphs.setObjectName(u"Mathlibgraphs")
-        self.Mathlibgraphs.setMinimumSize(QSize(500, 300))
+        self.mat_lib_graphs = QWidget(self.data_tab)
+        self.mat_lib_graphs.setObjectName(u"mat_lib_graphs")
+        self.mat_lib_graphs.setMinimumSize(QSize(500, 300))
 
-        self.verticalLayout_4.addWidget(self.Mathlibgraphs)
+        self.verticalLayout_4.addWidget(self.mat_lib_graphs)
 
         self.console_output_label = QLabel(self.data_tab)
         self.console_output_label.setObjectName(u"console_output_label")
@@ -88,17 +88,17 @@ class Ui_Form(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.horizontalLayout_3 = QHBoxLayout()
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.HighestConfidenceImages = QWidget(Form)
-        self.HighestConfidenceImages.setObjectName(u"HighestConfidenceImages")
-        self.HighestConfidenceImages.setMinimumSize(QSize(150, 300))
+        self.highest_confidence_images = QWidget(Form)
+        self.highest_confidence_images.setObjectName(u"highest_confidence_images")
+        self.highest_confidence_images.setMinimumSize(QSize(150, 300))
 
-        self.horizontalLayout_3.addWidget(self.HighestConfidenceImages)
+        self.horizontalLayout_3.addWidget(self.highest_confidence_images)
 
-        self.WorstConfidenceImages = QWidget(Form)
-        self.WorstConfidenceImages.setObjectName(u"WorstConfidenceImages")
-        self.WorstConfidenceImages.setMinimumSize(QSize(150, 300))
+        self.worst_confidence_images = QWidget(Form)
+        self.worst_confidence_images.setObjectName(u"worst_confidence_images")
+        self.worst_confidence_images.setMinimumSize(QSize(150, 300))
 
-        self.horizontalLayout_3.addWidget(self.WorstConfidenceImages)
+        self.horizontalLayout_3.addWidget(self.worst_confidence_images)
 
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_3)
@@ -125,17 +125,17 @@ class Ui_Form(object):
 
         self.horizontalLayout_4.addItem(self.horizontalSpacer)
 
-        self.label = QLabel(Form)
-        self.label.setObjectName(u"label")
-        self.label.setMaximumSize(QSize(150, 30))
+        self.number_of_epochs_label = QLabel(Form)
+        self.number_of_epochs_label.setObjectName(u"number_of_epochs_label")
+        self.number_of_epochs_label.setMaximumSize(QSize(150, 30))
 
-        self.horizontalLayout_4.addWidget(self.label)
+        self.horizontalLayout_4.addWidget(self.number_of_epochs_label)
 
-        self.textEdit = QTextEdit(Form)
-        self.textEdit.setObjectName(u"textEdit")
-        self.textEdit.setMaximumSize(QSize(80, 29))
+        self.training_epochs_number = QTextEdit(Form)
+        self.training_epochs_number.setObjectName(u"training_epochs_number")
+        self.training_epochs_number.setMaximumSize(QSize(80, 29))
 
-        self.horizontalLayout_4.addWidget(self.textEdit)
+        self.horizontalLayout_4.addWidget(self.training_epochs_number)
 
         self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
@@ -152,7 +152,7 @@ class Ui_Form(object):
 
         self.progressBar = QProgressBar(Form)
         self.progressBar.setObjectName(u"progressBar")
-        self.progressBar.setValue(24)
+        self.progressBar.setValue(0)
 
         self.verticalLayout_3.addWidget(self.progressBar)
 
@@ -189,7 +189,7 @@ class Ui_Form(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.data_tab), QCoreApplication.translate("Form", u"Data", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.image_viewer_tab), QCoreApplication.translate("Form", u"Image Viewer", None))
         self.select_new_dataset_button.setText(QCoreApplication.translate("Form", u"Run on new dataset...", None))
-        self.label.setText(QCoreApplication.translate("Form", u"Number of Epochs:", None))
+        self.number_of_epochs_label.setText(QCoreApplication.translate("Form", u"Number of Epochs:", None))
         self.train_button.setText(QCoreApplication.translate("Form", u"Train", None))
     # retranslateUi
 

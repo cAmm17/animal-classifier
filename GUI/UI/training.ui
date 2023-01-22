@@ -42,7 +42,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QWidget" name="Mathlibgraphs" native="true">
+            <widget class="QWidget" name="mat_lib_graphs" native="true">
              <property name="minimumSize">
               <size>
                <width>500</width>
@@ -99,7 +99,7 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
-          <widget class="QWidget" name="HighestConfidenceImages" native="true">
+          <widget class="QWidget" name="highest_confidence_images" native="true">
            <property name="minimumSize">
             <size>
              <width>150</width>
@@ -109,7 +109,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QWidget" name="WorstConfidenceImages" native="true">
+          <widget class="QWidget" name="worst_confidence_images" native="true">
            <property name="minimumSize">
             <size>
              <width>150</width>
@@ -177,7 +177,7 @@
             </spacer>
            </item>
            <item>
-            <widget class="QLabel" name="label">
+            <widget class="QLabel" name="number_of_epochs_label">
              <property name="maximumSize">
               <size>
                <width>150</width>
@@ -190,7 +190,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QTextEdit" name="textEdit">
+            <widget class="QTextEdit" name="training_epochs_number">
              <property name="maximumSize">
               <size>
                <width>80</width>
@@ -230,7 +230,7 @@
          <item>
           <widget class="QProgressBar" name="progressBar">
            <property name="value">
-            <number>24</number>
+            <number>0</number>
            </property>
           </widget>
          </item>
